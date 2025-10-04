@@ -16,7 +16,7 @@ const MenuSection = () => {
       name: 'Pasta Carbonara',
       description: 'Creamy Italian pasta with bacon, eggs, and parmesan',
       price: 18.99,
-      image: '/images/menu/carbonara.jpg',
+      image: '/pasta-carbonara.jpg',
       category: 'Main Course',
     },
     {
@@ -24,7 +24,7 @@ const MenuSection = () => {
       name: 'Grilled Salmon',
       description: 'Fresh Atlantic salmon with herb butter and vegetables',
       price: 24.99,
-      image: '/images/menu/salmon.jpg',
+      image: '/grilled-salmon.jpg',
       category: 'Main Course',
     },
     {
@@ -32,7 +32,7 @@ const MenuSection = () => {
       name: 'Chocolate Lava Cake',
       description: 'Warm chocolate cake with molten center and vanilla ice cream',
       price: 9.99,
-      image: '/images/menu/chocolate.jpg',
+      image: '/choco-lava-cake.jpg',
       category: 'Dessert',
     },
     {
@@ -40,13 +40,13 @@ const MenuSection = () => {
       name: 'Caesar Salad',
       description: 'Crisp romaine lettuce with house-made Caesar dressing',
       price: 12.99,
-      image: '/images/menu/salad.jpg',
+      image: '/caesar-salad.jpg',
       category: 'Appetizer',
     },
   ];
 
   return (
-    <section ref={ref} className="min-h-screen flex items-center bg-gradient-to-b from-[#0f1b27] to-[#1a2937] relative overflow-hidden py-20" id="menu">
+    <section ref={ref} className="min-h-screen flex items-center bg-gradient-to-b from-gray-950 to-gray-900 relative overflow-hidden py-20" id="menu">
       {/* Subtle background pattern */}
       <div 
         className="absolute inset-0 opacity-5"
@@ -94,7 +94,7 @@ const MenuSection = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: index * 0.15 }}
-              className="group relative bg-[#0f1b27] border border-[#d9b061]/20 overflow-hidden hover:border-[#d9b061]/50 transition-all duration-500"
+              className="group relative bg-gray-950 border border-[#d9b061]/20 overflow-hidden hover:border-[#d9b061]/50 transition-all duration-500"
             >
               {/* Image Container */}
               <div className="relative h-56 w-full overflow-hidden">
@@ -112,10 +112,10 @@ const MenuSection = () => {
                 </motion.div>
                 
                 {/* Dark overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0f1b27] via-[#0f1b27]/50 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/50 to-transparent"></div>
 
                 {/* Category badge */}
-                <div className="absolute top-4 left-4 px-3 py-1 bg-[#0f1b27]/80 backdrop-blur-sm border border-[#d9b061]/30">
+                <div className="absolute top-4 left-4 px-3 py-1 bg-gray-950/80 backdrop-blur-sm border border-[#d9b061]/30">
                   <span className="text-[10px] text-[#d9c4a9] font-light tracking-[0.2em] uppercase">
                     {item.category}
                   </span>
@@ -124,8 +124,8 @@ const MenuSection = () => {
                 {/* Price badge */}
                 <div className="absolute top-4 right-4 w-14 h-14 flex items-center justify-center bg-[#d9b061] group-hover:bg-[#c0a050] transition-colors duration-300">
                   <div className="text-center">
-                    <div className="text-[10px] text-[#0f1b27] font-light">from</div>
-                    <div className="text-sm text-[#0f1b27] font-semibold">${item.price}</div>
+                    <div className="text-[10px] text-gray-950 font-light">from</div>
+                    <div className="text-sm text-gray-950 font-semibold">${item.price}</div>
                   </div>
                 </div>
               </div>
@@ -176,7 +176,7 @@ const MenuSection = () => {
         >
           <Link
             href="/menu"
-            className="group relative inline-block px-10 py-4 bg-transparent text-[#d9c4a9] border-2 border-[#d9b061] font-medium tracking-wider uppercase text-sm overflow-hidden transition-all duration-500 hover:text-[#0f1b27]"
+            className="group relative inline-block px-10 py-4 bg-transparent text-[#d9c4a9] border-2 border-[#d9b061] font-medium tracking-wider uppercase text-sm overflow-hidden transition-all duration-500 hover:text-gray-950"
           >
             <motion.div
               className="absolute inset-0 bg-[#d9b061] origin-left"

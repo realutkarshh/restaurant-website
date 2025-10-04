@@ -10,15 +10,15 @@ const Gallery = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   const galleryImages = [
-    { id: 1, src: '/images/gallery/img1.jpg', alt: 'Restaurant interior', span: 'col-span-1 row-span-2' },
-    { id: 2, src: '/images/gallery/img2.jpg', alt: 'Gourmet dish', span: 'col-span-1 row-span-1' },
-    { id: 3, src: '/images/gallery/img3.jpg', alt: 'Chef preparing meal', span: 'col-span-1 row-span-1' },
-    { id: 4, src: '/images/gallery/img4.jpg', alt: 'Fine dining table', span: 'col-span-1 row-span-1' },
-    { id: 5, src: '/images/gallery/img5.jpg', alt: 'Dessert selection', span: 'col-span-1 row-span-1' },
+    { id: 1, src: '/gallery1.jpg', alt: 'Restaurant interior', span: 'col-span-1 row-span-2' },
+    { id: 2, src: '/gallery2.jpg', alt: 'Gourmet dish', span: 'col-span-1 row-span-1' },
+    { id: 3, src: '/gallery3.webp', alt: 'Chef preparing meal', span: 'col-span-1 row-span-1' },
+    { id: 4, src: '/gallery4.jpg', alt: 'Fine dining table', span: 'col-span-1 row-span-1' },
+    { id: 5, src: '/gallery5.jpg', alt: 'Dessert selection', span: 'col-span-1 row-span-1' },
   ];
 
   return (
-    <section ref={ref} className="min-h-screen flex items-center bg-[#0f1b27] relative overflow-hidden py-20">
+    <section ref={ref} className="min-h-screen flex items-center bg-gray-950 relative overflow-hidden py-20">
       {/* Subtle background pattern */}
       <div 
         className="absolute inset-0 opacity-5"
@@ -74,7 +74,7 @@ const Gallery = () => {
               <div className="absolute inset-2 border border-[#d9b061]/20 group-hover:border-[#d9b061]/40 transition-all duration-500 z-10 pointer-events-none opacity-0 group-hover:opacity-100"></div>
 
               {/* Image container */}
-              <div className="relative w-full h-full overflow-hidden bg-[#1a2937]">
+              <div className="relative w-full h-full overflow-hidden bg-gray-900">
                 <motion.div
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.7, ease: 'easeOut' }}
@@ -89,7 +89,7 @@ const Gallery = () => {
                 </motion.div>
 
                 {/* Elegant gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0f1b27]/80 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity duration-500"></div>
 
                 {/* Golden glow effect on hover */}
                 <div className="absolute inset-0 bg-[#d9b061]/0 group-hover:bg-[#d9b061]/10 transition-all duration-500"></div>

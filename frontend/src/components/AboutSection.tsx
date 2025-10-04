@@ -9,7 +9,7 @@ const AboutSection = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section ref={ref} className="min-h-screen flex items-center bg-[#0f1b27] relative overflow-hidden" id="about">
+    <section ref={ref} className="min-h-screen flex items-center bg-gray-950 relative overflow-hidden" id="about">
       {/* Subtle background pattern */}
       <div 
         className="absolute inset-0 opacity-5"

@@ -5,9 +5,9 @@ import Image from 'next/image';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0f1b27]">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-950">
       {/* Elegant gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0f1b27] via-[#1a2937] to-[#0f1b27] opacity-90"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 opacity-90"></div>
       
       {/* Subtle animated background pattern */}
       <motion.div 
@@ -96,7 +96,7 @@ const Hero = () => {
           >
             <a
               href="#menu"
-              className="group relative px-8 py-4 bg-[#d9b061] text-[#0f1b27] font-medium tracking-wider uppercase text-sm overflow-hidden transition-all duration-500 hover:bg-[#c0a050]"
+              className="group relative px-8 py-4 bg-[#d9b061] text-gray-950 font-medium tracking-wider uppercase text-sm overflow-hidden transition-all duration-500 hover:bg-[#c0a050]"
             >
               <span className="relative z-10">Explore Menu</span>
               <motion.div
@@ -105,14 +105,14 @@ const Hero = () => {
                 whileHover={{ scaleX: 1 }}
                 transition={{ duration: 0.5 }}
               />
-              <span className="absolute inset-0 flex items-center justify-center text-[#0f1b27] opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 font-medium">
+              <span className="absolute inset-0 flex items-center justify-center text-gray-950 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 font-medium">
                 Explore Menu
               </span>
             </a>
             
             <a
               href="#contact"
-              className="group px-8 py-4 bg-transparent text-[#d9c4a9] font-medium tracking-wider uppercase text-sm border border-[#d9b061] hover:bg-[#d9b061] hover:text-[#0f1b27] transition-all duration-500"
+              className="group px-8 py-4 bg-transparent text-[#d9c4a9] font-medium tracking-wider uppercase text-sm border border-[#d9b061] hover:bg-[#d9b061] hover:text-gray-950 transition-all duration-500"
             >
               Reserve Table
             </a>
@@ -182,7 +182,7 @@ const Hero = () => {
             </motion.div>
             
             {/* Elegant overlay gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0f1b27]/40 via-transparent to-transparent pointer-events-none"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-gray-950/40 via-transparent to-transparent pointer-events-none"></div>
           </div>
 
           {/* Floating decorative corner accents */}
