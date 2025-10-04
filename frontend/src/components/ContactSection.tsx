@@ -24,7 +24,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section ref={ref} className="min-h-screen flex items-center bg-[#0f1b27] relative overflow-hidden py-20" id="contact">
+    <section ref={ref} className="min-h-screen flex items-center bg-gray-950 relative overflow-hidden py-20" id="contact">
       {/* Subtle background pattern */}
       <div 
         className="absolute inset-0 opacity-5"
@@ -68,7 +68,7 @@ const ContactSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative bg-[#1a2937] border border-[#d9b061]/20 p-8 md:p-12"
+          className="relative bg-gray-900 border border-[#d9b061]/20 p-8 md:p-12"
         >
           {/* Decorative corner accents */}
           <div className="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-[#d9b061]"></div>
@@ -87,7 +87,7 @@ const ContactSection = () => {
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   required
-                  className="w-full px-4 py-4 bg-[#0f1b27] border border-[#d9b061]/30 text-[#f2f2f2] placeholder-[#bfafaf] focus:border-[#d9b061] focus:outline-none transition-all duration-300 font-light"
+                  className="w-full px-4 py-4 bg-gray-950 border border-[#d9b061]/30 text-[#f2f2f2] placeholder-[#bfafaf] focus:border-[#d9b061] focus:outline-none transition-all duration-300 font-light"
                   placeholder="Your name"
                 />
                 <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#d9b061] transition-all duration-300 group-focus-within:w-full"></div>
@@ -106,7 +106,7 @@ const ContactSection = () => {
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   required
-                  className="w-full px-4 py-4 bg-[#0f1b27] border border-[#d9b061]/30 text-[#f2f2f2] placeholder-[#bfafaf] focus:border-[#d9b061] focus:outline-none transition-all duration-300 font-light"
+                  className="w-full px-4 py-4 bg-gray-950 border border-[#d9b061]/30 text-[#f2f2f2] placeholder-[#bfafaf] focus:border-[#d9b061] focus:outline-none transition-all duration-300 font-light"
                   placeholder="your@email.com"
                 />
               </div>
@@ -124,7 +124,7 @@ const ContactSection = () => {
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   required
                   rows={6}
-                  className="w-full px-4 py-4 bg-[#0f1b27] border border-[#d9b061]/30 text-[#f2f2f2] placeholder-[#bfafaf] focus:border-[#d9b061] focus:outline-none transition-all duration-300 resize-none font-light"
+                  className="w-full px-4 py-4 bg-gray-950 border border-[#d9b061]/30 text-[#f2f2f2] placeholder-[#bfafaf] focus:border-[#d9b061] focus:outline-none transition-all duration-300 resize-none font-light"
                   placeholder="Tell us about your inquiry, special requests, or reservations..."
                 ></textarea>
               </div>
@@ -136,7 +136,7 @@ const ContactSection = () => {
                 type="submit"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="group relative w-full px-8 py-4 bg-[#d9b061] text-[#0f1b27] font-medium tracking-wider uppercase text-sm overflow-hidden transition-all duration-500 hover:bg-[#c0a050] flex items-center justify-center gap-3"
+                className="group relative w-full px-8 py-4 bg-[#d9b061] text-gray-950 font-medium tracking-wider uppercase text-sm overflow-hidden transition-all duration-500 hover:bg-[#c0a050] flex items-center justify-center gap-3"
               >
                 <span>Send Message</span>
                 <Send size={18} className="group-hover:translate-x-1 transition-transform duration-300" />

@@ -16,7 +16,7 @@ const LocationHours = () => {
   ];
 
   return (
-    <section ref={ref} className="min-h-screen flex items-center bg-gradient-to-b from-[#1a2937] to-[#0f1b27] relative overflow-hidden py-20">
+    <section ref={ref} className="min-h-screen flex items-center bg-gradient-to-b from-gray-900 to-gray-950 relative overflow-hidden py-20">
       {/* Subtle background pattern */}
       <div 
         className="absolute inset-0 opacity-5"
@@ -68,7 +68,7 @@ const LocationHours = () => {
             <div className="absolute -inset-4 border-2 border-[#d9b061]/30 group-hover:border-[#d9b061]/50 transition-all duration-500"></div>
             
             {/* Inner frame */}
-            <div className="absolute inset-0 border border-[#d9b061]/20 bg-[#0f1b27] overflow-hidden">
+            <div className="absolute inset-0 border border-[#d9b061]/20 bg-gray-950 overflow-hidden">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2412648750455!2d-73.98784968459395!3d40.748817379328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1234567890"
                 width="100%"
@@ -97,7 +97,7 @@ const LocationHours = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="group relative bg-[#0f1b27] border border-[#d9b061]/20 p-6 hover:border-[#d9b061]/50 transition-all duration-500"
+              className="group relative bg-gray-950 border border-[#d9b061]/20 p-6 hover:border-[#d9b061]/50 transition-all duration-500"
             >
               {/* Icon background */}
               <div className="absolute top-6 right-6 w-12 h-12 bg-[#d9b061]/10 flex items-center justify-center group-hover:bg-[#d9b061]/20 transition-colors duration-500">
@@ -125,7 +125,7 @@ const LocationHours = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="group relative bg-[#0f1b27] border border-[#d9b061]/20 p-6 hover:border-[#d9b061]/50 transition-all duration-500"
+              className="group relative bg-gray-950 border border-[#d9b061]/20 p-6 hover:border-[#d9b061]/50 transition-all duration-500"
             >
               {/* Icon background */}
               <div className="absolute top-6 right-6 w-12 h-12 bg-[#d9b061]/10 flex items-center justify-center group-hover:bg-[#d9b061]/20 transition-colors duration-500">
@@ -156,7 +156,7 @@ const LocationHours = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="group relative bg-[#0f1b27] border border-[#d9b061]/20 p-6 hover:border-[#d9b061]/50 transition-all duration-500"
+              className="group relative bg-gray-950 border border-[#d9b061]/20 p-6 hover:border-[#d9b061]/50 transition-all duration-500"
             >
               {/* Icon background */}
               <div className="absolute top-6 right-6 w-12 h-12 bg-[#d9b061]/10 flex items-center justify-center group-hover:bg-[#d9b061]/20 transition-colors duration-500">

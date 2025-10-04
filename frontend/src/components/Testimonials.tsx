@@ -28,7 +28,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section ref={ref} className="min-h-screen flex items-center bg-[#0f1b27] relative overflow-hidden py-20">
+    <section ref={ref} className="min-h-screen flex items-center bg-gray-950 relative overflow-hidden py-20">
       {/* Subtle background pattern */}
       <div 
         className="absolute inset-0 opacity-5"

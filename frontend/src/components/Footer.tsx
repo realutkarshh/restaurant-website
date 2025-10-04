@@ -3,7 +3,7 @@ import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from 'lucide-react'
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0f1b27] text-white relative overflow-hidden border-t border-[#d9b061]/20">
+    <footer className="bg-gray-950 text-white relative overflow-hidden border-t border-[#d9b061]/20">
       {/* Subtle background pattern */}
       <div 
         className="absolute inset-0 opacity-5"
