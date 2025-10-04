@@ -24,7 +24,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="text-2xl font-bold text-orange-600">
-            RestaurantName
+            KAPs CAFE
           </Link>
 
           {/* Desktop Navigation */}
