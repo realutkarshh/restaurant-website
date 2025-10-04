@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { menuItems } from '@/data/menuItems';
 import { ArrowLeft, Check } from 'lucide-react';
 
-
 // Generate static params for all menu items
 export async function generateStaticParams() {
   return menuItems.map((item) => ({
@@ -12,10 +11,10 @@ export async function generateStaticParams() {
   }));
 }
 
-
-// Generate metadata for SEO
-export async function generateMetadata({ params }: { params: { id: string } }) {
-  const item = menuItems.find((item) => item.id === params.id);
+// Generate metadata for SEO - FIXED: params is now Promise
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const item = menuItems.find((item) => item.id === id);
   
   if (!item) {
     return {
@@ -23,27 +22,24 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
     };
   }
 
-
   return {
     title: `${item.name} - Menu | Restaurant Name`,
     description: item.description,
   };
 }
 
-
-export default function MenuItemPage({ params }: { params: { id: string } }) {
-  const item = menuItems.find((item) => item.id === params.id);
-
+// FIXED: Made function async and params is now Promise
+export default async function MenuItemPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const item = menuItems.find((item) => item.id === id);
 
   if (!item) {
     notFound();
   }
 
-
   const relatedItems = menuItems
     .filter((i) => i.category === item.category && i.id !== item.id)
     .slice(0, 3);
-
 
   return (
     <div className="min-h-screen bg-gray-950 py-16 md:py-24">
@@ -56,7 +52,6 @@ export default function MenuItemPage({ params }: { params: { id: string } }) {
           <ArrowLeft size={20} className="mr-2" />
           <span className="uppercase text-sm tracking-widest">Back to Menu</span>
         </Link>
-
 
         {/* Item Details */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-24">
@@ -84,7 +79,6 @@ export default function MenuItemPage({ params }: { params: { id: string } }) {
             <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-[#d9b061] opacity-50"></div>
           </div>
 
-
           {/* Info */}
           <div>
             <div className="flex items-center gap-3 mb-6">
@@ -103,7 +97,6 @@ export default function MenuItemPage({ params }: { params: { id: string } }) {
               )}
             </div>
 
-
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[#f2f2f2] mb-6 leading-tight">
               {item.name}
             </h1>
@@ -111,16 +104,13 @@ export default function MenuItemPage({ params }: { params: { id: string } }) {
             {/* Decorative line */}
             <div className="w-16 h-[1px] bg-[#d9b061] mb-6"></div>
 
-
             <p className="text-4xl md:text-5xl font-serif text-[#d9b061] mb-8">
               ${item.price}
             </p>
 
-
             <p className="text-lg text-[#bfafaf] mb-10 leading-relaxed font-light">
               {item.description}
             </p>
-
 
             {/* Features */}
             <div className="relative bg-gray-900 p-8 mb-10 overflow-hidden">
@@ -148,7 +138,6 @@ export default function MenuItemPage({ params }: { params: { id: string } }) {
               </div>
             </div>
 
-
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <a
@@ -166,7 +155,6 @@ export default function MenuItemPage({ params }: { params: { id: string } }) {
             </div>
           </div>
         </div>
-
 
         {/* Related Items */}
         {relatedItems.length > 0 && (
