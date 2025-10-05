@@ -172,11 +172,11 @@ const MenuSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-center"
+          className="text-center "
         >
           <Link
             href="/menu"
-            className="group relative inline-block px-10 py-4 bg-transparent text-[#d9c4a9] border-2 border-[#d9b061] font-medium tracking-wider uppercase text-sm overflow-hidden transition-all duration-500 hover:text-gray-950"
+            className="group relative inline-block px-10 py-4 bg-transparent text-[#d9c4a9] border-2 border-[#d9b061] font-medium tracking-wider uppercase text-sm overflow-hidden transition-all duration-500 hover:bg-[#d9b061] hover:text-gray-950"
           >
             <motion.div
               className="absolute inset-0 bg-[#d9b061] origin-left"
@@ -184,7 +184,7 @@ const MenuSection = () => {
               whileHover={{ scaleX: 1 }}
               transition={{ duration: 0.5 }}
             />
-            <span className="relative z-10 flex items-center gap-3">
+            <span className="relative z-10 flex items-center gap-3 ">
               View Full Menu
               <motion.span
                 className="group-hover:translate-x-1 transition-transform duration-300"

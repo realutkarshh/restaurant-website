@@ -253,10 +253,10 @@ export default function MenuPage() {
                     <motion.div
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="group/btn relative inline-block overflow-hidden"
+                      className="group/btn relative inline-block overflow-hidden "
                     >
                       <motion.div
-                        className="relative px-8 py-3 bg-transparent text-[#d9c4a9] font-light tracking-wider uppercase text-sm border border-[#d9b061] group-hover/btn:text-gray-950 transition-colors duration-500"
+                        className="relative px-8 py-3 bg-transparent text-[#d9c4a9] font-light tracking-wider uppercase text-sm border border-[#d9b061] hover:bg-[#d9b061] hover:text-gray-950 transition-colors duration-500"
                         whileHover={{ borderColor: "#d9b061" }}
                       >
                         <span className="relative z-10">View Details</span>
