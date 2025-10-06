@@ -23,7 +23,7 @@ const Footer = () => {
             <Link href="/" className="inline-block group mb-6">
               <div className="flex flex-col items-start">
                 <span className="text-3xl font-serif text-[#d9b061] tracking-wider group-hover:text-[#c0a050] transition-colors duration-300">
-                  KAP'S
+                  Utkarsh'S
                 </span>
                 <div className="flex items-center gap-2 -mt-1">
                   <div className="h-[1px] w-8 bg-[#d9b061]"></div>
@@ -169,7 +169,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-[#bfafaf] text-sm font-light">
-            © 2025 KAP'S Café. All rights reserved.
+            © 2025 Utkarsh'S Café. All rights reserved.
           </p>
           <div className="flex space-x-8">
             <Link 

@@ -58,7 +58,7 @@ const Navbar = () => {
                 className="flex flex-col items-start"
               >
                 <span className="text-2xl md:text-3xl font-serif text-[#d9b061] tracking-wider">
-                  KAP'S
+                  Utkarsh'S
                 </span>
                 <div className="flex items-center gap-2 -mt-1">
                   <div className="h-[1px] w-8 bg-[#d9b061]"></div>
